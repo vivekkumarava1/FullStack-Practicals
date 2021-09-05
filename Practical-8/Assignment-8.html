@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-8</title>
+    <link rel="stylesheet" href="css1.css">
+    <style>
+        #backgroundimg {
+            margin-top: 75px;
+            height: 680px;
+            margin-bottom: 20px;
+            display: flex;
+            font-size: 40px;
+            color: white;
+        }
+        
+        #backgroundimg {
+            background-image: url(./img8.png);
+            background-position: center;
+            background-size: cover;
+            margin: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .circle {
+            margin-top: 30px;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color: goldenrod;
+            float: left;
+            margin-left: 105px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        
+        #circle1 {
+            background-image: url(./circle1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #circle2 {
+            background-image: url(./circle4.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #circle3 {
+            background-image: url(./circle3.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #circle4 {
+            background-image: url(./circle2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        section2 {}
+        
+        section2::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .main {
+            width: 100%;
+            height: 400px;
+            margin: 10px;
+        }
+        
+        .box {
+            /* margin-top: 380px; */
+        }
+        
+        .left {
+            margin: 10px;
+            width: 50%;
+            height: 400px;
+            background-color: grey;
+            float: left;
+        }
+        
+        .right {}
+        
+        .r1 {
+            width: 40%;
+            height: 126px;
+            margin-bottom: 20px;
+            background-color: chocolate;
+            display: flex;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(231, 26, 26);
+            margin-right: 35px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            float: right;
+            justify-content: center;
+        }
+        
+        #id1 {
+            background-image: url(./id1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #id2 {
+            background-image: url(./id2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #id3 {
+            background-image: url(./id3.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        h1 {
+            color: black;
+            font-size: 40px;
+            text-align: center;
+            padding: 25px 0px;
+        }
+        
+        .Technology {
+            width: 100%;
+            margin: 15px auto;
+        }
+        
+        .Technology::after {
+            content: '';
+            display: flex;
+            clear: both;
+        }
+        
+        .A {
+            width: 23%;
+            float: left;
+            margin: 20px 15px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        #box {
+            background-color: blue;
+            padding-left: 20px;
+        }
+        
+        .A img {
+            padding: 10px;
+            border-radius: 20px;
+            width: 94%;
+            height: 200px;
+        }
+        
+        .mybutton {
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: red;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 20px;
+        }
+        
+        .mybutton:hover {
+            background-color: royalblue;
+        }
+        
+        #footer {
+            background-color: yellowgreen;
+            height: 110px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="Nav">
+        <ul>
+            <li>
+                <a href="#"> Home</a></li>
+            <li>
+                <a href="#">About Us</a></li>
+            <li>
+                <a href="#">Team</a></li>
+            <li>
+                <a href="#">Technologies</a></li>
+            <li>
+                <a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <a name="top"></a>
+    <div id="backgroundimg">
+        <h2 style="margin:20px 10px 10px 10px;">Practical-8</h2>
+
+    </div>
+    <div id="team">
+        <h1 style="text-align: center;font-size: 40px;margin-top: 15px;">Team Members</h1>
+        <div class="teammembers">
+            <div class="circle" id="circle1"></div>
+            <div class="circle" id="circle2"></div>
+            <div class="circle" id="circle3"></div>
+            <div class="circle" id="circle4"></div>
+        </div>
+    </div>
+    <div id="AboutUs">
+        <a name="about"></a>
+        <h1>About Us</h1>
+        <div class="box">
+            <div class="main">
+                <div class="left">
+
+                    <h2 style="color: rgb(8, 1, 1);font-size: 40px; margin: 10px 15px;">About Project</h2>
+                    <p style="font-size: 20px;padding: 10px;text-align: justify;line-height: 27px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias laudantium voluptatibus accusamus dicta, ex voluptatum recusandae velit, quia deleniti, blanditiis exercitationem perspiciatis expedita tempora quibusdam consectetur sed
+                        cum quidem distinctio ducimus nulla? Iusto ea libero sapiente veniam, perspiciatis ab odio voluptatem voluptatibus, commodi, voluptate porro tempora quod suscipit rem neque? Vitae numquam magni perspiciatis quis sed earum explicabo
+                        fugiat voluptatem nam minima voluptatum doloribus exercitationem aperiam aspernatur delectus excepturi blanditiis error enim deserunt reiciendis, sequi nostrum ipsa eveniet? Dicta assumenda eos illum quasi, minus earum sapiente
+                        commodi sit odio autem distinctio et, quae nihil omnis rerum impedit quisquam, molestiae maiores facere nesciunt accusamus? Eius, sunt velit nam qui voluptate molestiae, incidunt iusto corrupti officiis aperiam odio facilis nulla
+                        doloremque laudantium illo vero quae magni possimus quis voluptas, ipsam enim voluptatem? Modi nostrum aspernatur</p>
+
+                </div>
+                <div class="right">
+                    <div class="r1" id="id1">
+                        <h2>Project-1</h2>
+                    </div>
+                    <div class="r1" id="id2">
+                        <h2>Project-2</h2>
+                    </div>
+                    <div class="r1" id="id3">
+                        <h2>Project-3</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Technology">
+        <h1>Technologies Used</h1>
+        <div class="A" id=" box" style="border-radius: 20px;">
+            <div class="image">
+                <img src="./html.PNG" alt="">
+            </div>
+            <h2 style="text-align: center;margin: 10px;font-size: medium;">Introduction to the HTML</h2>
+            <p>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as CSS and scripting languages such as JS.
+            </p>
+            <div class="link" style="text-align: center;">
+                <a href="https://en.wikipedia.org/wiki/HTML" class="mybutton">Read more</a>
+            </div>
+
+        </div>
+        <div class="A" id=" box1" style="padding-right: 10x;">
+            <img src="./js.png" alt="">
+            <h2 style="text-align: center;margin: 10px;font-size: medium;">Introduction to the JS</h2>
+            <p>JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax. </p>
+            <div class="link" style="text-align: center;">
+                <a href="https://en.wikipedia.org/wiki/JavaScript" class="mybutton">Read more</a>
+            </div>
+        </div>
+        <div class="A" id=" box2">
+            <div><img src="./css.png" alt=""></div>
+            <h2 style="text-align: center;margin: 10px;font-size: medium;">Introduction to the CSS</h2>
+            <p>CSS(Cascading Style Sheets ) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the Lorem ipsum dolor sit amet. </p>
+            <div class="link" style="text-align: center;">
+                <a href="https://en.wikipedia.org/wiki/CSS" class="mybutton">Read more</a>
+            </div>
+        </div>
+        <div class="A" id=" box3">
+            <div><img src="./bootstrap.jpg" alt=""></div>
+            <h2 style="text-align: center;margin: 10px;font-size: medium;">Introduction to the BOOTSTRAP</h2>
+
+            <p>Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.It contains CSS- and JS for forms, buttons, navigation, and other interface components.
+            </p>
+            <div class="link" style="text-align: center;">
+                <a href="https://en.wikipedia.org/wiki/BOOTSTRAP" class="mybutton">Read more</a>
+            </div>
+        </div>
+    </div>
+    <a="Contact"></a>
+        <h1>Contact</h1>
+        <div id="footer">
+            <p style="font-size: 20px;color: black; text-align: center;
+            padding: 20px;">
+                "Website Templete for Practical-8"
+                <a href="https://vivekkumarava1.github.io/FullStack-Practicals/">FullStack-Practicals</a>
+                <br>
+                <br>
+                <a href="#top">Back to top</a>
+            </p>
+        </div>
+
+
+
+</body>
+
+</html>
