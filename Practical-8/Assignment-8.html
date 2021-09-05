@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Practical-8</title>
     <link rel="stylesheet" href="css1.css">
     <style>
@@ -12,7 +13,7 @@
             margin-top: 75px;
             height: 680px;
             margin-bottom: 20px;
-            display: flex;
+            display: block;
             font-size: 40px;
             color: white;
         }
@@ -151,6 +152,7 @@
             background-color: white;
             padding: 15px;
             border-radius: 10px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
         }
         
         #box {
@@ -190,37 +192,56 @@
 </head>
 
 <body>
-    <div class="Nav">
-        <ul>
-            <li>
-                <a href="#"> Home</a></li>
-            <li>
-                <a href="#">About Us</a></li>
-            <li>
-                <a href="#">Team</a></li>
-            <li>
-                <a href="#">Technologies</a></li>
-            <li>
-                <a href="#">Contact</a></li>
-        </ul>
+    <div id="container">
+
+
     </div>
     <a name="top"></a>
+
+    <div class="Nav">
+
+        <ul>
+            <li>
+                <a href="#top"> Home</a></li>
+            <li>
+                <a href="#about">About Us</a></li>
+            <li>
+                <a href="#team">Team</a></li>
+
+            <li>
+                <a href="#Technologies">Technologies</a></li>
+            <li>
+                <a href="#Contact">Contact</a></li>
+        </ul>
+
+    </div>
+
+
     <div id="backgroundimg">
         <h2 style="margin:20px 10px 10px 10px;">Practical-8</h2>
 
     </div>
+
+
+
+
     <div id="team">
-        <h1 style="text-align: center;font-size: 40px;margin-top: 15px;">Team Members</h1>
+
+        <h2 style="text-align: center;font-size: 30px;">Team Members</h2>
         <div class="teammembers">
             <div class="circle" id="circle1"></div>
             <div class="circle" id="circle2"></div>
             <div class="circle" id="circle3"></div>
             <div class="circle" id="circle4"></div>
         </div>
+
     </div>
+
+
     <div id="AboutUs">
         <a name="about"></a>
         <h1>About Us</h1>
+
         <div class="box">
             <div class="main">
                 <div class="left">
@@ -233,6 +254,7 @@
                         doloremque laudantium illo vero quae magni possimus quis voluptas, ipsam enim voluptatem? Modi nostrum aspernatur</p>
 
                 </div>
+
                 <div class="right">
                     <div class="r1" id="id1">
                         <h2>Project-1</h2>
@@ -240,14 +262,24 @@
                     <div class="r1" id="id2">
                         <h2>Project-2</h2>
                     </div>
+
                     <div class="r1" id="id3">
                         <h2>Project-3</h2>
+                        <a name="Technologies"></a>
                     </div>
                 </div>
             </div>
+
+
+
         </div>
+
+
+
     </div>
+
     <div id="Technology">
+
         <h1>Technologies Used</h1>
         <div class="A" id=" box" style="border-radius: 20px;">
             <div class="image">
@@ -288,18 +320,27 @@
             </div>
         </div>
     </div>
-    <a="Contact"></a>
-        <h1>Contact</h1>
-        <div id="footer">
-            <p style="font-size: 20px;color: black; text-align: center;
+    <a name="Contact"></a>
+    <h1>Contact</h1>
+    <div class="contact" style="text-align: center; font-size: 25px;text-decoration: none;">
+        <a style="text-decoration: none; margin-right: 15px;" href="https://github.com/vivekkumarava1" <i class="fa fa-github"></i>
+            Github</a>
+        <a style="text-decoration: none;margin-right: 15px;" href="https://www.instagram.com/_i.vivekkumar/" <i class="fa fa-instagram"></i>
+            Instagram</a>
+        <a style="text-decoration: none;" href="" <i class="fa fa-phone"></i>
+            +916377705297</a>
+    </div>
+    <div id="footer">
+        <p style="font-size: 20px;color: black; text-align: center;
             padding: 20px;">
-                "Website Templete for Practical-8"
-                <a href="https://vivekkumarava1.github.io/FullStack-Practicals/">FullStack-Practicals</a>
-                <br>
-                <br>
-                <a href="#top">Back to top</a>
-            </p>
-        </div>
+            "Website Templete for Practical-8"
+            <a href="https://vivekkumarava1.github.io/FullStack-Practicals/">FullStack-Practicals</a>
+            <br>
+            <br>
+            <a href="#top">Back to top</a>
+        </p>
+    </div>
+    </div>
 
 
 
