@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Practical-9</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .cont {
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        html {
+            scroll-padding-top: 70px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: white;
+        }
+        
+        .menu {
+            list-style: none;
+            float: right;
+        }
+        
+        .menu li {
+            line-height: 70px;
+            display: inline-block;
+        }
+        
+        .menu li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 0px 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        
+        .menu li a:hover {
+            color: white;
+            background-color: rgb(0, 255, 128);
+        }
+        /* 
+  --Resolve Position Fixed Issue-- 
+                  & 
+    ----------Smooth Scroll ------ 
+  */
+        
+        html {
+            scroll-padding-top: 70px;
+            scroll-behavior: smooth;
+        }
+        
+        #container {
+            width: 100%;
+            max-width: 1400px;
+            padding: 15px;
+            margin: auto;
+        }
+        
+        .show-btn,
+        .hide-btn,
+        #chk {
+            font-size: 30px;
+            line-height: 70px;
+            color: white;
+            display: none;
+        }
+        /* ------Header Container-------- */
+        
+        .header::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        #header {
+            width: 1370px;
+            background-color: grey;
+            position: fixed;
+            top: 0;
+            height: 70px;
+            padding: 0px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        /* -------Navigation Bar----------- */
+        
+        #navBar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        #navBar>a {
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 10px 40px;
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #navBar>a:hover {
+            background-color: gold;
+            color: white;
+        }
+        /* ------------------Banner ------------- */
+        
+        #banner {
+            margin-top: 70px;
+            height: 680px;
+            margin-bottom: 15px;
+            display: flex;
+            font-size: 40px;
+            color: white;
+        }
+        
+        #banner {
+            background-image: url("./img8.png");
+            background-size: cover;
+            background-position: center;
+        }
+        
+        #banner h2 {
+            margin: 20px 20px;
+            color: white;
+        }
+        /* ------- Team Members ----- */
+        
+        #circle-container {
+            width: 100%;
+            margin: 15px auto;
+        }
+        
+        #circle-container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .circle img {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-color: goldenrod;
+            float: left;
+            margin-left: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* -------------About Us-------------- */
+        
+        #sec2-container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        #left-side {
+            width: 50%;
+            height: 550px;
+            background-color: skyblue;
+            float: left;
+            color: #fff;
+        }
+        
+        #left-p>h2 {
+            text-align: left;
+            margin: 10px 5px;
+        }
+        
+        #left-p>p {
+            font-size: 20px;
+            padding: 10px;
+            text-align: justify;
+            line-height: 28px;
+        }
+        
+        #right-side {
+            width: 48%;
+            height: 550px;
+            float: right;
+        }
+        
+        .artical {
+            height: 31%;
+            margin-bottom: 20px;
+            background-color: chocolate;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: darkgoldenrod;
+            overflow: hidden;
+        }
+        
+        #p1 {
+            background-image: url(./id1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #p2 {
+            background-image: url(./id2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #p3 {
+            background-image: url(./id3.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        /* --------- Technologies Used------------ */
+        
+        #grid-container {
+            width: 100%;
+            margin: 15px auto;
+        }
+        
+        #grid-container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .grid {
+            width: 21%;
+            float: left;
+            margin-left: 40px;
+            background-color: lightgrey;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px black;
+        }
+        
+        .grid>img {
+            width: 100%;
+            height: 180px;
+            margin-bottom: 10px;
+        }
+        
+        .grid>h4 {
+            margin: 0px 10px;
+            text-align: center;
+        }
+        
+        .grid>p {
+            margin: 10px;
+            font-size: 15px;
+            text-align: justify;
+            line-height: 25px;
+            color: white;
+        }
+        
+        .grid>a {
+            display: block;
+            margin: 3 px;
+            text-align: center;
+            color: #fff;
+            background-color: red;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        h1 {
+            color: black;
+            font-size: 40px;
+            text-align: center;
+            padding: 25px 0px;
+        }
+        
+        .grid>a:hover {
+            background-color: orange;
+        }
+        /* -------Footer Section ------- */
+        
+        #footer {
+            background-color: cadetblue;
+            height: 70px;
+        }
+        
+        #footer>p {
+            font-size: 16px;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        @media (min-width: 900px) and (max-width: 1199px) {
+            .menu {
+                list-style: none;
+                float: right;
+            }
+            .menu li {
+                line-height: 70px;
+                display: inline-block;
+            }
+            .menu li a {
+                display: block;
+                text-decoration: none;
+                color: white;
+                padding: 0px 20px;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+            .menu li a:hover {
+                color: white;
+                background-color: gold;
+            }
+            /* 
+    --Resolve Position Fixed Issue-- 
+                    & 
+      ----------Smooth Scroll ------ 
+    */
+            html {
+                scroll-padding-top: 70px;
+                scroll-behavior: smooth;
+            }
+            #container {
+                width: 100%;
+                max-width: 1400px;
+                padding: 15px;
+                margin: auto;
+            }
+            .show-btn,
+            .hide-btn,
+            #chk {
+                font-size: 30px;
+                line-height: 70px;
+                color: white;
+                display: none;
+            }
+            /* ------Header Container-------- */
+            .header::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            #header {
+                width: 1370px;
+                background-color: salmon;
+                position: fixed;
+                top: 0;
+                height: 70px;
+                padding: 0px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            /* -------Navigation Bar----------- */
+            #navBar {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            #navBar>a {
+                text-transform: uppercase;
+                display: inline-block;
+                padding: 10px 40px;
+                text-decoration: none;
+                color: white;
+                font-size: 24px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #navBar>a:hover {
+                background-color: gold;
+                color: white;
+            }
+            /* ------------------Banner ------------- */
+            #banner {
+                margin-top: 70px;
+                height: 680px;
+                margin-bottom: 15px;
+                display: flex;
+                font-size: 40px;
+                color: white;
+            }
+            #banner {
+                background-image: url(landscape.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            #banner h2 {
+                margin: 20px 20px;
+                color: white;
+            }
+            /* ------- Team Members ----- */
+            #circle-container {
+                width: 100%;
+                margin: 15px auto;
+            }
+            #circle-container::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .circle img {
+                height: 300px;
+                width: 300px;
+                border-radius: 50%;
+                background-color: goldenrod;
+                float: left;
+                margin-left: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            /* -------------About Us-------------- */
+            #sec2-container::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            #left-side {
+                width: 50%;
+                height: 550px;
+                background-color: skyblue;
+                float: left;
+                color: #fff;
+            }
+            #left-p>h2 {
+                text-align: left;
+                margin: 10px 5px;
+            }
+            #left-p>p {
+                font-size: 20px;
+                padding: 10px;
+                text-align: justify;
+                line-height: 28px;
+            }
+            #right-side {
+                width: 48%;
+                height: 550px;
+                float: right;
+            }
+            .artical {
+                height: 31%;
+                margin-bottom: 20px;
+                background-color: chocolate;
+                display: flex;
+                justify-content: center;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: darkgoldenrod;
+                overflow: hidden;
+            }
+            #p1 {
+                background-image: url(./id1.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #p2 {
+                background-image: url(./id2.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #p3 {
+                background-image: url(./id3.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            /* --------- Technologies Used------------ */
+            #grid-container {
+                width: 100%;
+                margin: 15px auto;
+            }
+            #grid-container::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .grid {
+                width: 21%;
+                float: left;
+                margin-left: 40px;
+                background-color: lightgrey;
+                border-radius: 8px;
+                box-shadow: 0 10px 15px black;
+            }
+            .grid>img {
+                width: 100%;
+                height: 180px;
+                margin-bottom: 10px;
+            }
+            .grid>h4 {
+                margin: 0px 10px;
+                text-align: center;
+            }
+            .grid>p {
+                margin: 10px;
+                font-size: 15px;
+                text-align: justify;
+                line-height: 25px;
+                color: white;
+            }
+            .grid>a {
+                display: block;
+                margin: 3 px;
+                text-align: center;
+                color: #fff;
+                background-color: red;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
+            }
+            h1 {
+                color: black;
+                font-size: 40px;
+                text-align: center;
+                padding: 25px 0px;
+            }
+            .grid>a:hover {
+                background-color: orange;
+            }
+            /* -------Footer Section ------- */
+            #footer {
+                background-color: orange;
+                height: 70px;
+            }
+            #footer>p {
+                font-size: 16px;
+                color: black;
+                text-align: center;
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 800px) {
+            #header {
+                width: 100%;
+                background-color: grey;
+                position: fixed;
+                top: 0;
+                height: 70px;
+            }
+            .show-btn {
+                display: block;
+            }
+            .menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                padding: 80px 0px;
+                line-height: normal;
+                transition: 0.7s;
+            }
+            .menu li {
+                display: block;
+            }
+            .manu li a {
+                display: block;
+            }
+            #chk:checked~.menu {
+                right: 0;
+            }
+            .hide-btn {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+            #banner {
+                width: 100%;
+                height: 350px;
+                margin-bottom: 15px;
+                display: flex;
+                font-size: 30px;
+                color: white;
+                margin-top: 90px;
+            }
+            #banner h2 {
+                margin: 10px 20px;
+                color: #fff;
+            }
+            #circle-container {
+                width: 100%;
+            }
+            #circle-container::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .circle img {
+                height: 250px;
+                width: 250px;
+                border-radius: 50%;
+                float: left;
+                margin-left: 10%;
+                margin-bottom: 20px;
+            }
+            #left-side {
+                width: 100%;
+                height: 200px;
+                background-color: gray;
+                color: #fff;
+                margin-bottom: 20px;
+            }
+            #left-p>h2 {
+                text-align: left;
+                margin: 5px 5px;
+            }
+            #left-p>p {
+                font-size: 20px;
+                padding: 10px;
+                text-align: justify;
+                line-height: 28px;
+            }
+            #right-side {
+                width: 100%;
+                height: 400px;
+            }
+            .artical {
+                height: 31%;
+                margin-bottom: 20px;
+                background-color: chocolate;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: black;
+                overflow: hidden;
+            }
+            #p1 {
+                background-image: url(./id1.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #p2 {
+                background-image: url(./id2.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #p3 {
+                background-image: url(./id3.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #grid-container {
+                width: 100%;
+                margin: 15px auto;
+            }
+            #grid-container::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .grid {
+                width: 40%;
+                float: left;
+                margin-left: 50px;
+                background-color: lightgrey;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+            .grid>img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .grid>h4 {
+                margin: 0px 10px;
+                text-align: center;
+            }
+            .grid>p {
+                margin: 10px;
+                font-size: 15px;
+                text-align: justify;
+                line-height: 25px;
+                color: white;
+            }
+            .grid>a {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
+                background-color: red;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
+            }
+            h1 {
+                color: black;
+                font-size: 40px;
+                text-align: center;
+                padding: 25px 0px;
+            }
+        }
+        
+        @media (max-width: 625px) {
+            /* Set container to min-width of 320px */
+            #container {
+                min-width: 320px;
+            }
+            .show-btn {
+                display: block;
+            }
+            .menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                padding: 80px 0px;
+                line-height: normal;
+                transition: 0.7s;
+            }
+            .menu li {
+                display: block;
+            }
+            .manu li a {
+                display: block;
+            }
+            #chk:checked~.menu {
+                right: 0;
+            }
+            .hide-btn {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+            #banner {
+                width: 100%;
+                height: 250px;
+                margin-bottom: 15px;
+                color: white;
+                margin-top: 90px;
+            }
+            #banner h2 {
+                margin: 10px 20px;
+                color: #fff;
+                font-size: 20px;
+            }
+            #circle-container {
+                width: 90%;
+                margin-left: 10%;
+            }
+            .circle img {
+                height: 70%;
+                width: 70%;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+            #left-side {
+                width: 100%;
+                height: 200px;
+                background-color: gray;
+                color: #fff;
+                margin-bottom: 20px;
+            }
+            #left-p>h2 {
+                text-align: left;
+                margin: 5px 5px;
+            }
+            #left-p>p {
+                font-size: 20px;
+                padding: 10px;
+                text-align: justify;
+                line-height: 28px;
+            }
+            #right-side {
+                width: 100%;
+                height: 400px;
+            }
+            .artical {
+                box-sizing: border-box;
+                height: 31%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: black;
+                overflow: hidden;
+            }
+            #p1 {
+                background-image: url(./id1.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #p2 {
+                background-image: url(./id2.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #p3 {
+                background-image: url(./id3.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #grid-container {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .grid {
+                margin-left: 20px;
+                width: 90%;
+                background-color: lightgrey;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+                max-height: 500px;
+            }
+            .grid>img {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 20px;
+            }
+            .grid>h4 {
+                margin: 0px 10px;
+                text-align: center;
+            }
+            .grid>p {
+                margin: 10px;
+                font-size: 15px;
+                text-align: justify;
+                line-height: 25px;
+                color: white;
+            }
+            .grid>a {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
+                background-color: red;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
+            }
+            h1 {
+                color: black;
+                font-size: 20px;
+                text-align: center;
+                padding-top: 25px;
+                padding-bottom: 15px;
+            }
+        }
+    </style>
+
+    <body>
+        <div id="container">
+            <div id="header">
+                <input type="checkbox" id="chk" />
+                <label for="chk" class="show-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+                <ul class="menu">
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#circle-container">Team</a></li>
+                    <li><a href="#Technologies">Technologies</a></li>
+                    <li><a href="#contact">contact</a></li>
+
+                    <label for="chk" class="hide-btn">
+                    <i class="fa fa-times"></i>
+                </label>
+                </ul>
+            </div>
+            <a name="top"></a>
+
+            <div id="banner">
+                <h2>PRACTICAL - 8</h2>
+            </div>
+            <div id="circle-container">
+                <h1>Team Members</h1>
+                <div class="circle">
+                    <img src="./circle1.png" alt="" />
+                </div>
+                <div class="circle">
+                    <img src="./circle2.png" alt="" />
+                </div>
+                <div class="circle">
+                    <img src="./circle3.png" alt="" />
+                </div>
+                <div class="circle">
+                    <img src="./circle4.png" alt="" />
+                </div>
+            </div>
+            <div id="sec2-container">
+                <a name="about"></a>
+                <h1>About Us</h1>
+                <div id="left-side">
+                    <div class="left-content">
+                        <div id="left-p">
+                            <h2>About Projects</h2>
+                            <p>
+                                A project is a series of related a tasks which when they are carried in the correct order will lead to the completion of the project. Projects are temporary, generally resulting in the creation of a tangible product or outcome. This is as opposed to a
+                                programme, which is a series of interrelated projects that may be carried out repeatedly or continuously in order to support an ongoing process. For more information, see Project v programme. A construction project, sometimes
+                                just referred to as a ‘project’, is the organised process of constructing, renovating, refurbishing, etc. a building, structure or infrastructure. The project process typically starts with an overarching requirement which
+                                is developed through the creation of a brief, feasibility studies, option studies, design, financing and construction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="right-side">
+                    <div class="artical" id="p1">
+                        <h2>Project-1</h2>
+                    </div>
+                    <div class="artical" id="p2">
+                        <h2>Project-2</h2>
+                    </div>
+                    <div class="artical" id="p3">
+                        <h2>Project-3</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="grid-container">
+                <a name="Technologies"></a>
+                <h1>Technologies Used</h1>
+                <div class="grid">
+                    <img src="html.png" alt="" />
+                    <h4>Introduction to HTML</h4>
+                    <p>
+                        The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+                    </p>
+
+                    <a href="https://www.w3schools.com">Read More</a>
+                </div>
+                <div class="grid">
+                    <img src="css.png" alt="" />
+                    <h4>Introduction to CSS</h4>
+                    <p>
+                        Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+                    </p>
+
+                    <a href="https://www.w3schools.com">Read More</a>
+                </div>
+                <div class="grid">
+                    <img src="js.png" alt="" />
+                    <h4>Introduction to JavaScript</h4>
+                    <p>
+                        JavaScript (/ˈdʒɑːvəˌskrɪpt/), often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, and first-class functions.
+                    </p>
+
+                    <a href="https://www.w3schools.com">Read More</a>
+                </div>
+                <div class="grid">
+                    <img src="bootstrap.jpg" alt="" />
+                    <h4>Introduction to Bootstrap</h4>
+                    <p>
+                        Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
+                    </p>
+
+                    <a href="https://www.w3schools.com">Read More</a>
+                </div>
+            </div>
+            <a name="contact"></a>
+            <h1>Contact</h1>
+            <div class="cont">
+                <a style="text-decoration: none; margin-right: 15px;color: red;" href="https://github.com/vivekkumarava1" <i class="fa fa-github"></i>
+                    Github</a>
+                <a style="text-decoration: none;margin-right: 15px;color: red;" href="https://www.instagram.com/_i.vivekkumar/" <i class="fa fa-instagram"></i>
+                    Instagram</a>
+                <a style="text-decoration: none;color: red;" href="" <i class="fa fa-phone"></i>
+                    +916377705297</a>
+            </div>
+            <div id="footer">
+                <p>
+                    <a href="#top">Back to top</a>
+                </p>
+            </div>
+        </div>
+    </body>
+
+</html>

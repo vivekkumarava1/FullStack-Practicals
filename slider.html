@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: grey;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slider {
+            width: 250px;
+            height: 250px;
+            background-color: white;
+            position: relative;
+        }
+        
+        .door {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-color: black;
+            right: -100%;
+            transition: 2s;
+        }
+        
+        .slider:hover .door {
+            right: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="door"></div>
+        </div>
+    </div>
+</body>
+
+</html>
