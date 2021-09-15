@@ -9,6 +9,8 @@
         width: 100%;
         height: 70px;
         background-color: black;
+        position: fixed;
+        top: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,6 +25,7 @@
     header h2 {
         color: white;
         line-height: 70px;
+        text-align: center;
     }
     
     .sidebar {
@@ -31,6 +34,8 @@
         width: 20%;
         background-color: darkcyan;
         position: fixed;
+        transition: 0.4s;
+        left: -100%;
     }
     
     .sidebar ul {
@@ -47,7 +52,7 @@
         font-size: 20px;
         padding: 15px 20px;
         font-weight: bold;
-        transition: 0.15s;
+        transition: 0.4s;
     }
     
     a i {
@@ -57,7 +62,7 @@
     }
     
     .sidebar ul li a:hover {
-        border-left: papayawhip 4px solid;
+        border-left: papayawhip 10px solid;
     }
     
     .social {
@@ -93,7 +98,7 @@
     #chk {
         position: absolute;
         visibility: hidden;
-        z-index: -100;
+        z-index: -100%;
     }
     
     #chk:checked~.sidebar {
