@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <title>Practical-12</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    table {
+        text-align: left;
+        line-height: 20px;
+        border-collapse: separate;
+        border-spacing: 2px;
+        border: 2px solid #34495e;
+        width: 60%;
+        margin: 20px auto;
+        border-radius: 5px;
+    }
+    
+    thead tr:first-child {
+        width: 100%;
+        /* background: #34495e; */
+        color: black;
+        border: none;
+        line-height: 40px;
+    }
+    
+    thead tr th:last-child {
+        text-align: center;
+        line-height: 50px;
+        padding: 15px;
+        margin-right: 2px;
+    }
+    
+    thead tr th:nth-child(3) {
+        /* padding-left: 20px; */
+    }
+    
+    th:first-child,
+    td:first-child {
+        padding: 10px 10px 10px 10px;
+    }
+    
+    thead tr:last-child th {
+        border-bottom: 4px solid #ddd;
+    }
+    
+    .mybutton {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: red;
+        padding: 15px;
+        margin-top: 25px;
+        border-radius: 20px;
+    }
+    
+    .mybutton:hover {
+        background-color: royalblue;
+    }
+</style>
+
+<body>
+    <table style="font-size: 25px;padding: 10px;">
+        <thead>
+            <tr>
+                <th colspan="5" style="background-color:white">SELECT YOUR PLAN</th>
+            </tr>
+            <br>
+            <tr style="text-align:center; font-size: 40px;font-weight: bold;color: blueviolet;margin-bottom: 5px; background-color: rgb(201, 149, 149);">
+
+                <th><i class="fa fa-building-o" aria-hidden="true"></i>Basic</th>
+                <th><i class="fa fa-eercast" aria-hidden="true"></i>Plus</th>
+                <th><i class="fa fa-telegram" aria-hidden="true"></i>Deluxe</th>
+                <th><i class="fa fa-snowflake-o" aria-hidden="true"></i>Pro</th>
+
+            </tr>
+        </thead>
+        <tr style="padding: 10px;text-align: center;margin-bottom: 5px;">
+            <th style="background-color: cornflowerblue;">RS. 500</th>
+            <th style="background-color: rgb(18, 168, 168);">RS. 1500</th>
+            <th style="background-color: rgb(144, 187, 64);">RS. 2500</th>
+            <th style="background-color: rgb(92, 77, 155);">RS. 3500</th>
+        </tr>
+        <tr style="padding: 10px; text-align: center;margin-bottom: 5px;">
+            <th style="background-color: rgba(76, 247, 161, 0.37);">50 pages</th>
+            <th style="background-color: rgb(122, 133, 102);">75 pages</th>
+            <th>Unlimited</th>
+            <th>Unlimited</th>
+        </tr>
+        <tr style="text-align: center;margin-bottom: 5px;">
+            <th style="background-color: cornflowerblue;">3 users</th>
+            <th style="background-color: rgb(18, 168, 168);">5 users</th>
+            <th style="background-color: rgb(144, 187, 64);">10 users</th>
+            <th style="background-color: rgb(92, 77, 155);">Unlimited</th>
+
+        </tr>
+        <tr style="text-align: center; margin-bottom: 5px;">
+            <th style="background-color: rgba(76, 247, 161, 0.37);">10 Sites</th>
+            <th style="background-color: rgb(122, 133, 102);">25 Sites</th>
+            <th>100 Sites</th>
+            <th>Unlimited</th>
+        </tr>
+        <tr style="text-align: center;margin-bottom: 5px;">
+            <th style="background-color: cornflowerblue;">
+                50 MB
+            </th>
+            <th style="background-color: rgb(18, 168, 168);">250 MB</th>
+            <th style="background-color: rgb(144, 187, 64);">1 GB</th>
+            <th style="background-color: rgb(92, 77, 155);">5 GB</th>
+        </tr>
+        <tr style="text-align: center;margin-bottom: 5px;">
+            <th style="background-color: rgba(76, 247, 161, 0.37);">included</th>
+            <th style="background-color: rgb(122, 133, 102);">included</th>
+            <th>included</th>
+            <th>included</th>
+        </tr>
+        <tr style="text-align: center;margin-bottom: 5px;">
+            <th style="background-color: cornflowerblue;"><i class="fa fa-check" aria-hidden="true" style="color: green;font-size: 30px;"></i></th>
+            <th style="background-color: rgb(18, 168, 168);"><i class="fa fa-check" aria-hidden="true" style="color: green;font-size: 30px;"></i></th>
+            <th style="background-color: rgb(144, 187, 64);"><i class="fa fa-check" aria-hidden="true" style="color: green;font-size: 30px;"></i></th>
+            <th style="background-color: rgb(92, 77, 155);"><i class="fa fa-check" aria-hidden="true" style="color: green;font-size: 30px;"></i></th>
+
+        </tr>
+        <tr style="text-align: center;margin-bottom: 5px;">
+            <th style="background-color: rgba(76, 247, 161, 0.37);"><i class="fa fa-times" aria-hidden="true" style="color: red;font-size: 30px;"></i></th>
+            <th style="background-color: rgb(122, 133, 102);><i class=" fa fa-check " aria-hidden="true " style="color: green;font-size: 30px; "></i></th>
+            <th><i class="fa fa-check " aria-hidden="true " style="color: green;font-size: 30px; "></i></th>
+            <th><i class="fa fa-check " aria-hidden="true " style="color: green;font-size: 30px; "></i></th>
+        </tr>
+        <tr style="text-align: center;margin-bottom: 5px; ">
+            <th style="background-color: cornflowerblue; "><i class="fa fa-times " aria-hidden="true " style="color: red;font-size: 30px; "></i></th>
+            <th style="background-color: rgb(18, 168, 168); "><i class="fa fa-check " aria-hidden="true " style="color: green;font-size: 30px; "></i></th>
+            <th style="background-color: rgb(144, 187, 64); "><i class="fa fa-check " aria-hidden="true " style="color: green;font-size: 30px; "></i></th>
+            <th style="background-color: rgb(92, 77, 155); "><i class="fa fa-check " aria-hidden="true " style="color: green;font-size: 30px; "></i></th>
+        </tr>
+        <tr style="text-align: center;margin-bottom: 5px; ">
+            <th style="background-color: rgba(76, 247, 161, 0.37); "><i class="fa fa-times " aria-hidden="true " style="color: red;font-size: 30px; "></i></th>
+            <th style="background-color: rgb(122, 133, 102);><i class="fa fa-times" aria-hidden="true" style="color: red;font-size: 30px;"></i></th>
+            <th><i class="fa fa-check" aria-hidden="true" style="color: green;font-size: 30px;"></i></th>
+            <th><i class="fa fa-check" aria-hidden="true" style="color: green;font-size: 30px;"></i></th>
+        </tr>
+        <tr style="text-align: center;margin-bottom: 5px;">
+            <th style="background-color: cornflowerblue;"><i class="fa fa-times" aria-hidden="true" style="color: red;font-size: 30px;justify-content: center;text-align: center;"></i></th>
+            <th style="background-color: rgb(18, 168, 168);"><i class="fa fa-times" aria-hidden="true" style="color: red;font-size: 30px;"></i></th>
+            <th style="background-color: rgb(144, 187, 64);"><i class="fa fa-times" aria-hidden="true" style="color: red;font-size: 30px;"></i></th>
+
+            <th style="background-color: rgb(92, 77, 155);"><i class="fa fa-check" aria-hidden="true" style="color: green;font-size: 30px;text-align: center;"></i></th>
+        </tr>
+        <tr>
+            <th>
+                <div class="link" style="text-align: center;">
+                    <a href="#" class="mybutton">Sign Up</a>
+                </div>
+            </th>
+            <th>
+                <div class="link" style="text-align: center;">
+                    <a href="#" class="mybutton">Sign Up</a>
+                </div>
+            </th>
+            <th>
+                <div class="link" style="text-align: center;">
+                    <a href="#" class="mybutton">Sign Up</a>
+                </div>
+            </th>
+            <th>
+                <div class="link" style="text-align: center;">
+                    <a href="#" class="mybutton">Sign Up</a>
+                </div>
+            </th>
+        </tr>
+
+
+
+
+
+        <!-- <thead>
+            <tr>
+                <th>1</th>
+                <th> Create a web-page including HTML basic using offline and online platform.</th>
+                <th><a href="https://vivekkumarava1.github.io/FullStack-Practicals/Practical-1/Assignment-1">Practical-1</a></th>
+                <th style="color: green;">Checked</th>
+                <th>
+                    <i class="fa fa-pencil"></i>
+                    <i class="fa fa-remove"></i>
+                </th>
+            </tr>
+        </thead> -->
+
+    </table>
+
+</body>
+
+</html>
