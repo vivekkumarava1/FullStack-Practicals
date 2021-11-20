@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        width: 100%;
+        height: 100vh;
+        /* margin: 10px 10px 10px; */
+    }
+    
+    .nav {
+        width: 100%;
+        height: 80px;
+        background-color: black;
+        /* line-height: 40px; */
+    }
+    
+    .nav ul {
+        list-style: none;
+        float: right;
+    }
+    
+    .nav ul li {
+        /* display: inline-flex; */
+        padding: 0 20px 0 20px;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .nav ul li a {
+        display: block;
+        padding: 0 15px;
+        color: white;
+        text-decoration: none;
+        line-height: 60px;
+        font-size: 20px;
+    }
+    
+    .nav ul ul {
+        position: absolute;
+        display: none;
+        top: 60px;
+    }
+    
+    .nav ul li:hover>ul {
+        display: block;
+    }
+    
+    .nav ul ul li {
+        /* width: 400px; */
+        float: none;
+        display: list-item;
+        position: relative;
+    }
+    
+    #id1 li a {
+        text-align: center;
+    }
+    
+    .nav ul li a {
+        text-align: end;
+        text-decoration: none;
+        padding: 10px;
+        background-color: black;
+    }
+    
+    a:hover {
+        background-color: red;
+    }
+    
+    .left {
+        width: 40%;
+        height: 600px;
+    }
+    
+    .detail {
+        width: 40%;
+        float: right;
+        font-size: 25px;
+        margin-right: 20px;
+        margin-top: -270px;
+    }
+    
+    .left img {
+        width: 40%;
+        border-radius: 5%;
+        height: 240px;
+        margin-top: 50px;
+        margin-left: 40px;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .box,
+    .text h4 {
+        text-transform: uppercase;
+        color: rgb(27, 23, 23);
+        font-size: 16px;
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+    
+    .box {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .percentage {
+        position: relative;
+        width: 90%;
+        height: 15px;
+        background: crimson;
+    }
+    
+    .percentage div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: cyan;
+    }
+    
+    .right {
+        float: right;
+        width: 55%;
+        height: 600px;
+        margin-top: -580px;
+        overflow: hidden;
+    }
+    
+    .right h2 {
+        font-size: 30px;
+    }
+</style>
+
+<body style="background-color: whitesmoke">
+    <div class="container">
+        <div class="nav">
+            <!-- <div class="logo">
+                <img src="./Capture.PNG" alt="">
+            </div> -->
+
+            <ul>
+                <li>
+                    <a href="">HOME</a>
+                </li>
+                <li>
+                    <a href="">ABOUT</a>
+                </li>
+                <li>
+                    <a href="">SERVICES</a>
+                </li>
+                <li>
+                    <a href="">WORK</a>
+                </li>
+                <li>
+                    <a href="">BLOG</a>
+                </li>
+                <li>
+                    <a href="">DROP DOWN <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
+                    <ul id="id1">
+                        <li>
+                            <a href="#">Learn SQL</a>
+                        </li>
+                        <li>
+                            <a href="#">Learn CSS</a>
+                        </li>
+                        <li>
+                            <a href="#">Learn PHP</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li>
+                    <a href="">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+        <div class="left">
+            <div class="image">
+                <img src=".//circle1.png" alt="">
+
+            </div>
+            <div class="detail">
+                <br>
+                <p>Name:Morgan Freeman</p>
+                <br>
+                <p>Profile:full stack developer</p>
+                <br>
+                <p>Email:contact@gmail.com</p>
+                <br>
+                <p>Phone:+91-6377705297</p>
+            </div>
+            <div class="down">
+                <br>
+                <br>
+                <div class="box">
+                    <H4> <pre>html 95%</pre></H4>
+                    <div class="percentage">
+                        <div style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="box ">
+                    <H4> <pre>css 75%</pre></H4>
+                    <div class="percentage">
+                        <div style="width: 75%;"></div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <H4> <pre>php 65%</pre></H4>
+                    <div class="percentage">
+                        <div style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <H4> <pre>JAVASCRIPT 85%</pre></H4>
+                    <div class="percentage">
+                        <div style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h2>About</h2>
+            <br>
+            <br><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia perspiciatis ipsa, sit atque, provident fugit ullam minus dolor rerum accusamus unde delectus pariatur mollitia nisi dignissimos quis laudantium modi hic facilis dolorem magni.
+                Quaerat veniam non fugiat id, quo, , at vero velit iusto placeat magni assumenda doloribus inventore. Molestias aut, aliquam minus voluptas accusantium rem soluta delectus id reprehenderit dolorem consequuntur fuga dignissimos quisquam
+                fugiat qui asperiores? Accusantium nisi sint enim vitae provident, ratione veniam facilis at quia molestias corporis libero numquam consectetur totam, mollitia laborum nulla harum. Officiis quidem totam iure reprehenderit placeat facere
+                sequi, cum dicta labore, laboriosam, deleniti perspiciatis quas obcaecati ad consequuntur voluptates in itaque minima beatae assumenda non! Iste adipisci aperiam distinctio qui, corrupti veniam assumenda maxime repellat cupiditate porro,
+                consequuntur, impedit dolorum dolore magni quae commodi nam laboriosam! Atque accusantium, perferendis consectetur inventore, expedita rerum totam sunt exercitationem iusto, voluptates molestiae sint. In eum deleniti aliquid cum nemo optio
+                eligendi, suscipit reiciendis iusto reprehenderit, placeat nulla laboriosam ipsum aut dolorum non ratione quae debitis possimus ad nihil tenetur ducimus quo? Quos maiores dolor nobis culpa modi harum nihil, ab magnam quis doloribus aspernatur,
+                itaque eligendi eaque odit alias nesciunt accusamus repellendus magni dicta autem. Id similique praesentium, deleniti tempora provident voluptatem quas sapiente laborum officiis voluptatum eaque dolores veniam impedit assumenda necessitatibus
+                ab amet qui ipsum laboriosam quisquam eos illo nemo quaerat. Illum laboriosam nesciunt velit unde iusto, perferendis numquam. Nesciunt non, incidunt reprehenderit culpa, aliquam corporis quas deserunt laborum nemo fuga, iusto labore vel!
+                Dolores velit officia laudantium. Velit eligendi saepe molestiae magni ea quisquam dolor in aliquam, nisi, quia quasi vel. Excepturi ex, possimus labore omnis distinctio, doloremque optio voluptatibus ut itaque rem exercitationem. Iusto
+                cum natus quod sit debitis, obcaecati illo at sapiente rerum atque quaerat dignissimos, voluptatum incidunt molestiae impedit et repudiandae ea explicabo reprehenderit nam ex fugiat magnam vel iure aliquid rem adipisci reiciendis eligendi.
+                Doloremque a quibusdam aspernatur ducimus error veniam vel voluptatum molestiae laudantium.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
